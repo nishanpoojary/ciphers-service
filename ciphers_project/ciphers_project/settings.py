@@ -131,5 +131,5 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:8000",
     "http://localhost:8001",
-    "ciphers-service-latest-nishanpoojary.onrender.com"
+    "https://ciphers-service-latest-nishanpoojary.onrender.com/"
 ]
