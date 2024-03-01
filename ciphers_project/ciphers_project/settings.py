@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%&&tc(@b+g09g5s65&xbfmrp+20z62+9qd*2l9hd98g*!^20)b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1', 'ciphers-service-latest-nishanpoojary.onrender.com']
+ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '0.0.0.0', '127.0.0.1', 'ciphers-service-latest-nishanpoojary.onrender.com']
 
 
 # Application definition
@@ -38,12 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -123,3 +125,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOWED_ORIGINS = [
+    "https://nishanpoojary.github.io",
+    "http://localhost:3000",
+    "http://localhost:8000",
+    "http://localhost:8001",
+    "ciphers-service-latest-nishanpoojary.onrender.com"
+]
